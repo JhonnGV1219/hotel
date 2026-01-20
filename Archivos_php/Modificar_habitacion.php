@@ -12,11 +12,53 @@ $sql=$conexion->query("select * from habitaciones where numero_hab=$numh");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/493395a733.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-     <form class="col-4 p-5 m-auto" style="border:1px solid; margin-left:10px; padding-top:20px;" method="POST">
-            <h3 class="text-center text-secondary" >Modificar Habitaciones</h3>
+<?php
+include ("../Archivos_php/encabezado.php");
+?>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #f8f9fa, #fbeaea);
+            font-family: 'Sawarabi Mincho', serif;
+        }
+
+        .form-japon {
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-japon {
+            background: #bc002d;
+            color: white;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn-japon:hover {
+            background: #90142f;
+            transform: scale(1.03);
+            color:white;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+
+
+
+<br>
+<br>
+    <form class="col-4 p-5 m-auto" style=" margin-left:10px; padding-top:20px; border-radius:20px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);" method="POST">
+            <h3 class="text-center text-danger" >🏯 Modificar Habitación</h3>
             <?php 
             include ("../controlador/actualizar_habitacion.php");
                 while($datos=$sql->fetch_object()) { ?>
@@ -42,7 +84,7 @@ $sql=$conexion->query("select * from habitaciones where numero_hab=$numh");
             ?>
             <div class="mb-3">
             </div>
-            <button type="submit" class="btn btn-primary" name="btn-ach" value="OK">Modificar Habitación</button>
+            <button type="submit" class="btn btn-japon w-100"" name="btn-ach" value="OK"> Modificar Habitación</button>
         </form>
 
 </body>

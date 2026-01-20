@@ -130,7 +130,7 @@
             <input type="number" class="form-control" name="hbh">
         </div>
 
-        <button type="submit" class="btn btn-primary w-100" name="btn-r" value="OK">
+        <button type="submit" class="btn btn-outline-danger w-100" name="btn-r" value="OK">
             Registrar Reserva
         </button>
     </form>
@@ -183,6 +183,9 @@
     </div>
 
 </div>
+<?php
+    include ("../Archivos_php/final.php");
+?>
 
 </body>
 </html>

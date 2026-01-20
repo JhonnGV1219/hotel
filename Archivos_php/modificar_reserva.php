@@ -52,13 +52,13 @@ $sql=$conexion->query("select * from reservas where id_reserva=$numr");
     </style>
 <br>
 <br>
-    <form class="col-4 p-5 m-auto" style="border:1px solid; margin-left:10px; padding-top:20px;" method="POST">
-            <h3 class="text-center text-secondary" >Modificar Rservas</h3>
+    <form class="col-4 p-5 m-auto" style=" margin-left:10px; padding-top:20px; border-radius:20px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);" method="POST">
+            <h3 class="text-center text-danger" >🏯 Modificar Reservas</h3>
             <input type="hidden" name="idr" value="<?=$_GET["idr"] ?>">
             <?php 
             include ("../controlador/actualizar_reserva.php");
                 while($datos=$sql->fetch_object()) { ?>
-
+                    <br>
                     <div class="mb-3">
                         <label for="nom" class="form-label">Nombre del Huesped</label>
                         <input type="text" class="form-control"  name="nomh" value="<?=$datos->nombre_huesped?>" >
@@ -86,8 +86,10 @@ $sql=$conexion->query("select * from reservas where id_reserva=$numr");
             ?>
             <div class="mb-3">
             </div>
-            <button type="submit" class="btn btn-primary" name="btn-acr" value="OK">Modificar Reserva </button>
+            <button type="submit" class="btn  btn btn-outline-danger w-100" name="btn-acr" value="OK" >Modificar Reserva </button>
         </form>
-
+<?php
+    include ("../Archivos_php/final.php");
+?>
 </body>
 </html>

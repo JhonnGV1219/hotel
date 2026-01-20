@@ -34,18 +34,6 @@ include ("../Archivos_php/encabezado.php");
             overflow: hidden;
         }
 
-        .btn-japon {
-            background: #bc002d;
-            color: white;
-            border-radius: 30px;
-            transition: 0.3s;
-        }
-
-        .btn-japon:hover {
-            background: #90142f;
-            transform: scale(1.03);
-            color:white;
-        }
 
         label {
             font-weight: bold;
@@ -84,8 +72,11 @@ include ("../Archivos_php/encabezado.php");
             ?>
             <div class="mb-3">
             </div>
-            <button type="submit" class="btn btn-japon w-100"" name="btn-ach" value="OK"> Modificar Habitación</button>
+            <button type="submit" class="btn btn-outline-danger w-100" name="btn-ach" value="OK"> Modificar Habitación</button>
         </form>
 
+<?php
+include ("../Archivos_php/final.php");
+?>
 </body>
 </html>

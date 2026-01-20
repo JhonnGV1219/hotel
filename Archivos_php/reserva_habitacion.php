@@ -38,7 +38,6 @@
         }
 
 
-
         /* Botones redondos */
         .btn-success, .btn-danger {
             border-radius: 50%;
@@ -99,7 +98,7 @@ include ("../Archivos_php/encabezado.php");
             </div>
 
             <div class="d-grid">
-                <button type="submit" class="btn btn-japon text-white" name="btn-rh" value="OK" style="background-color: #b30000;">
+                <button type="submit" class="btn btn-outline-danger w-100" name="btn-rh" value="OK" >
                     Registrar Habitación
                 </button>
             </div>
@@ -148,6 +147,9 @@ include ("../Archivos_php/encabezado.php");
         </div>
     </div>
 </div>
+<?php
+    include ("../Archivos_php/final.php");
+?>
 
 </body>
 </html>

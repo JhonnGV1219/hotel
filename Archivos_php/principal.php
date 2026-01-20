@@ -72,6 +72,9 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+<?php
+    include ("../Archivos_php/final.php");
+?>
 
 </body>
 </html>
